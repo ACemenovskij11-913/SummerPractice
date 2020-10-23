@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         //сохранение изображения в память для истории
         var edit = getSharedPreferences("history", Context.MODE_PRIVATE).edit()
         edit.putString("URI", saveImageToInternalStorage(bitmap).toString())
+        edit.apply()
         Log.d("saved", saveImageToInternalStorage(bitmap).toString())
 
         //установка цветов для view
